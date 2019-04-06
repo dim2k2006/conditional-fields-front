@@ -5,7 +5,18 @@
     <title>Conditional fields</title>
 </head>
 <body>
+    <form action="#">
+        <input type="checkbox" name="subscribe" data-rules='[{"name": "email", "value": ["true"]}]'> Subscribe
+
+        <br>
+
+        <input type="text" name="email"> Email
+    </form>
 
     <script src="/js/bundle.js"></script>
+
+    <script>
+        new ConditionalForm(document.querySelector('form'));
+    </script>
 </body>
 </html>
