@@ -1,0 +1,36 @@
+{
+    "extends": "airbnb",
+
+    "env": {
+        "node": true,
+        "browser": true,
+        "jest": true
+    },
+
+    "globals": {
+        "document": true,
+        "test": true,
+        "expect": true,
+        "describe": true,
+        "it": true,
+        "jest": true,
+        "google": true
+    },
+
+    "rules": {
+        "strict": 0,
+        "comma-dangle": 0,
+        "no-tabs": 0,
+        "indent": ["error", 4],
+        "arrow-parens": [2, "always"],
+        "no-underscore-dangle": [2, {"allowAfterThis": true}],
+        "max-len": [2, 240, 4, {"ignoreUrls": true}],
+        "no-confusing-arrow": [2, {"allowParens": true}],
+        "object-curly-spacing": [2, "never"],
+        "linebreak-style": 0,
+
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0,
+        "import/prefer-default-export": 0
+    }
+}

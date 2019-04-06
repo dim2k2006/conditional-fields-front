@@ -1,0 +1,61 @@
+{
+    "name": "conditional-fields-front",
+    "version": "1.0.0",
+    "description": "Conditional fields frontend",
+    "keywords": [
+        "Conditional",
+        "fields",
+        "frontend"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build": "NODE_ENV='production' webpack",
+        "eslint": "eslint './src/**/*.js'",
+        "test": "jest",
+        "deploy": "gh-pages -d public -b deploy/dev"
+    },
+    "pre-commit": [
+        "eslint",
+        "stylelint"
+    ],
+    "author": {
+        "name": "Dmitry Malofeev",
+        "email": "dim2k2006@yandex.ru"
+    },
+    "repository": {
+        "private": true
+    },
+    "license": "MIT",
+    "dependencies": {
+        "core-js": "^2.5.7",
+        "lodash": "^4.17.10"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "enzyme": "^3.1.0",
+        "enzyme-to-json": "^3.3.4",
+        "eslint": "^5.15.3",
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4",
+        "file-loader": "^1.1.11",
+        "gh-pages": "^1.2.0",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^23.1.0",
+        "jsdom": "^11.11.0",
+        "pre-commit": "^1.2.2",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "url-loader": "^0.5.9",
+        "webpack": "^4.12.0",
+        "webpack-bundle-analyzer": "^3.0.3",
+        "webpack-cli": "^3.0.4",
+        "webpack-dev-server": "^3.1.4"
+    }
+}
