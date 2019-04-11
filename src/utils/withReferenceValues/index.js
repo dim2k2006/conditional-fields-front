@@ -1,3 +1,4 @@
+import 'core-js/modules/es6.array.find';
 import stringToArray from '../stringToArray';
 
 /**
