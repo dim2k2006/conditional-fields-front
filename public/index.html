@@ -6,20 +6,39 @@
 </head>
 <body>
     <form action="#">
-        <input type="checkbox" name="subscribe"> Subscribe
+        <!-- INPUT -->
+        <input type="text" name="referenceInput" placeholder="Enter word 'alex'">
 
-        <br>
-        <br>
-
-        <input type="text" name="email" placeholder="Email" data-rules='[{"name": "subscribe", "value": ["true"]}]'>
-
-        <br>
-
-        <input type="text" name="age" placeholder="Age" data-rules='[{"name": "subscribe", "value": ["true"]}]'>
+        <input type="text" name="conditionalInput" placeholder="This is conditional input" data-rules='[{"name": "referenceInput", "value": ["alex"]}]'>
+        <!-- INPUT -->
 
         <br>
 
-        <input type="text" name="confirm" placeholder="Confirm age" data-rules='[{"name": "age", "value": ["16"]}]'>
+        <br>
+
+        <!-- TEXTAREA -->
+        <textarea name="referenceTextarea" placeholder="Enter word 'alex'"></textarea>
+
+        <textarea name="conditionalTextarea" placeholder="This is conditional textarea" data-rules='[{"name": "referenceTextarea", "value": ["alex"]}]'></textarea>
+        <!-- TEXTAREA -->
+
+
+
+
+        <!--<input type="checkbox" name="subscribe"> Subscribe-->
+
+        <!--<br>-->
+        <!--<br>-->
+
+        <!--<input type="text" name="email" placeholder="Email" data-rules='[{"name": "subscribe", "value": ["true"]}]'>-->
+
+        <!--<br>-->
+
+        <!--<input type="text" name="age" placeholder="Age" data-rules='[{"name": "subscribe", "value": ["true"]}]'>-->
+
+        <!--<br>-->
+
+        <!--<input type="text" name="confirm" placeholder="Confirm age" data-rules='[{"name": "age", "value": ["16"]}]'>-->
     </form>
 
     <script src="/js/bundle.js"></script>

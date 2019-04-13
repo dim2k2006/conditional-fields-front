@@ -1,12 +1,12 @@
 import Element from '../Element';
 
 /**
- * Creates a new Input class
+ * Creates a new Textarea class
  */
-class Input extends Element {
+class Textarea extends Element {
     constructor(root, rules = []) {
         super(root, rules);
     }
 }
 
-export default Input;
+export default Textarea;
