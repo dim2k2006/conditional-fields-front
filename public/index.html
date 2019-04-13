@@ -25,7 +25,10 @@
     <script src="/js/bundle.js"></script>
 
     <script>
-        new ConditionalForm(document.querySelector('form'));
+        new ConditionalForm(document.querySelector('form'), {
+            onShow: (root) => root.style.visibility = 'visible',
+            onHide: (root) => root.style.visibility = 'hidden'
+        });
     </script>
 </body>
 </html>
