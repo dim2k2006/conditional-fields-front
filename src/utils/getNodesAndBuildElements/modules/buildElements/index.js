@@ -7,9 +7,9 @@ import {elementRules} from '../../../../elements';
  * @returns {Array}
  */
 const buildElements = (props = {}) => {
-    const {conditionalNodes = [], referenceNodes = []} = props;
+    const {conditionalNodes = [], referenceNodes = [], config = {}} = props;
 
-    return [...conditionalNodes, ...referenceNodes].map((element) => buildElement(element, elementRules));
+    return [...conditionalNodes, ...referenceNodes].map((element) => buildElement(element, elementRules, config));
 };
 
 export default buildElements;
