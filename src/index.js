@@ -1,9 +1,21 @@
-import {elementRules} from './elements';
-import buildElement from './utils/buildElement';
+import {attributeName, formEvents, onShow, onHide} from './config';
+import getNodesAndBuildElements from './utils/getNodesAndBuildElements';
+import attachEvent from './utils/attachEvent';
+import onUpdate from './utils/onUpdate';
 
+/**
+ * Creates a new ConditionalForm class
+ */
 class ConditionalForm {
-    constructor(form) {
+    constructor(form, config = {}) {
         this.form = form;
+        this.config = {
+            attributeName,
+            formEvents,
+            onShow,
+            onHide,
+            ...config
+        };
 
         this.init();
     }
@@ -11,10 +23,11 @@ class ConditionalForm {
     init() {
         if (!this.form) return;
 
-        const elements = [].slice.call(this.form.querySelectorAll('[data-rules]')).map((element) => buildElement(element, elementRules));
+        const elements = getNodesAndBuildElements({form: this.form, attributeName, config: this.config});
 
-        console.log('elements:', elements);
-        console.log('init');
+        formEvents.forEach(attachEvent(this.form, elements, onUpdate(elements)));
+
+        elements.forEach(onUpdate(elements)()); // initial check
     }
 }
 
