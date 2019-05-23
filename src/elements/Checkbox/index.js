@@ -8,6 +8,10 @@ class Checkbox extends Element {
     get value() {
         return `${this.root.checked}`;
     }
+
+    onReset() {
+        this.root.checked = false;
+    }
 }
 
 export default Checkbox;
