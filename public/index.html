@@ -22,7 +22,19 @@
         <textarea name="conditionalTextarea" placeholder="This is conditional textarea" data-rules='[{"name": "referenceTextarea", "value": ["alex"]}]'></textarea>
         <!-- TEXTAREA -->
 
+        <br>
 
+        <br>
+
+        <!-- RADIO -->
+        <label><input type="radio" name="referenceRadio" value="1"> Reference Radio 1</label>
+        <label><input type="radio" name="referenceRadio" value="2"> Reference Radio 2</label>
+
+        <br>
+
+        <label><input type="radio" name="conditionalRadio" data-rules='[{"name": "referenceRadio", "value": ["1"]}]' value="1"> Conditional Radio 1</label>
+        <label><input type="radio" name="conditionalRadio" data-rules='[{"name": "referenceRadio", "value": ["1"]}]' value="2"> Conditional Radio 2</label>
+        <!-- RADIO -->
 
 
         <!--<input type="checkbox" name="subscribe"> Subscribe-->
