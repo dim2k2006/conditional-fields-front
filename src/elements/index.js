@@ -2,6 +2,7 @@ import Input from './Input';
 import Textarea from './Textarea';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
+import Select from './Select';
 
 export const elementRules = [
     {
@@ -19,6 +20,10 @@ export const elementRules = [
     {
         Element: Radio,
         check: (node) => node.tagName === 'INPUT' && node.type === 'radio'
+    },
+    {
+        Element: Select,
+        check: (node) => node.tagName === 'SELECT'
     }
 ];
 

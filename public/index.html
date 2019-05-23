@@ -62,20 +62,23 @@
         </div>
         <!-- CHECKBOX -->
 
-        <!--<input type="checkbox" name="subscribe"> Subscribe-->
+        <!-- SELECT -->
+        <div>
+            <select name="referenceSelect">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
 
-        <!--<br>-->
-        <!--<br>-->
-
-        <!--<input type="text" name="email" placeholder="Email" data-rules='[{"name": "subscribe", "value": ["true"]}]'>-->
-
-        <!--<br>-->
-
-        <!--<input type="text" name="age" placeholder="Age" data-rules='[{"name": "subscribe", "value": ["true"]}]'>-->
-
-        <!--<br>-->
-
-        <!--<input type="text" name="confirm" placeholder="Confirm age" data-rules='[{"name": "age", "value": ["16"]}]'>-->
+        <div>
+            <select name="conditionalSelect" data-rules='[{"name": "referenceSelect", "value": ["1"]}]'>
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <!-- SELECT -->
     </form>
 
     <script src="/js/bundle.js"></script>
