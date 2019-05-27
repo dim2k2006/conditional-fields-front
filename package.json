@@ -29,7 +29,8 @@
     "license": "MIT",
     "dependencies": {
         "core-js": "^2.5.7",
-        "lodash": "^4.17.10"
+        "lodash": "^4.17.10",
+        "normalize.css": "^8.0.1"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
