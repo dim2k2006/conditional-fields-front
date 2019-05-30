@@ -7,9 +7,9 @@
         "fields",
         "frontend"
     ],
-    "main": "index.js",
+    "main": "public/bundle.js",
     "scripts": {
-        "start": "webpack-dev-server",
+        "start": "webpack -w",
         "build": "NODE_ENV='production' webpack",
         "eslint": "eslint './src/**/*.js'",
         "test": "jest",

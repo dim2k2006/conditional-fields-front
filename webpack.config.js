@@ -13,7 +13,7 @@ module.exports = {
 
     output: {
         path: PATHS.build,
-        filename: 'js/bundle.js',
+        filename: 'bundle.js',
         publicPath: '/'
     },
 
@@ -38,16 +38,7 @@ module.exports = {
                 sideEffects: false
             }
         ]
-    },
-
-    devServer: {
-        stats: 'errors-only',
-        host: '0.0.0.0',
-        port: 3000,
-        contentBase: PATHS.build,
-        hot: true,
-        historyApiFallback: true
-    },
+    }
 };
 
 if (NODE_ENV === 'production') {
