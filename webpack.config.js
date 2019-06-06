@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const outputFile = 'bundle.js';
+const libraryName = 'conditional-form';
+
 const PATHS = {
     source: path.join(__dirname, 'src'),
     build: path.join(__dirname, 'public'),
@@ -13,7 +16,10 @@ module.exports = {
 
     output: {
         path: PATHS.build,
-        filename: 'bundle.js',
+        filename: outputFile,
+        library: libraryName,
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
         publicPath: '/'
     },
 
