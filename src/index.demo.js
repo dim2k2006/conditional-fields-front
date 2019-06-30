@@ -1,3 +1,4 @@
-import ConditionalFields from './app';
+import engine from './app';
+import checkEnvironment from './utils/checkEnvironment';
 
-export default ConditionalFields;
+export default engine(checkEnvironment());

@@ -1,3 +1,3 @@
-import ConditionalFields from './app';
+import engine from './app';
 
-window.ConditionalFields = ConditionalFields;
+window.ConditionalFields = engine();

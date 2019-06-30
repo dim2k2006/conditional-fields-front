@@ -29,6 +29,7 @@
     "dependencies": {
         "core-js": "^2.5.7",
         "lodash": "^4.17.10",
+        "md5": "^2.2.1",
         "normalize.css": "^8.0.1"
     },
     "devDependencies": {

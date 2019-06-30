@@ -3,32 +3,32 @@ import getNodesAndBuildElements from './utils/getNodesAndBuildElements';
 import attachEvent from './utils/attachEvent';
 import onUpdate from './utils/onUpdate';
 
-/**
- * Creates a new ConditionalFields class
- */
-class ConditionalFields {
-    constructor(form, config = {}) {
-        this.form = form;
-        this.config = {
-            attributeName,
-            formEvents,
-            onShow,
-            onHide,
-            ...config
-        };
+const engine = (isCorrectEnv = true) =>
+    class ConditionalFields {
+        constructor(form, config = {}) {
+            this.form = form;
+            this.config = {
+                attributeName,
+                formEvents,
+                onShow,
+                onHide,
+                ...config
+            };
 
-        this.init();
-    }
+            if (!isCorrectEnv) return;
 
-    init() {
-        if (!this.form) return;
+            this.init();
+        }
 
-        const elements = getNodesAndBuildElements({form: this.form, attributeName, config: this.config});
+        init() {
+            if (!this.form) return;
 
-        formEvents.forEach(attachEvent(this.form, elements, onUpdate(elements)));
+            const elements = getNodesAndBuildElements({form: this.form, attributeName, config: this.config});
 
-        elements.forEach(onUpdate(elements)()); // initial check
-    }
-}
+            formEvents.forEach(attachEvent(this.form, elements, onUpdate(elements)));
 
-export default ConditionalFields;
+            elements.forEach(onUpdate(elements)()); // initial check
+        }
+    };
+
+export default engine;
