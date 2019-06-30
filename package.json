@@ -1,11 +1,10 @@
 {
-    "name": "conditional-fields-front",
+    "name": "conditional-fields",
     "version": "1.0.0",
-    "description": "Conditional fields frontend",
+    "description": "Conditional fields",
     "keywords": [
         "Conditional",
-        "fields",
-        "frontend"
+        "fields"
     ],
     "main": "public/bundle.js",
     "scripts": {

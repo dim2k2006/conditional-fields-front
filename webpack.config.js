@@ -4,7 +4,7 @@ const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const outputFile = 'bundle.js';
-const libraryName = 'conditional-form';
+const libraryName = 'conditional-fields';
 
 const PATHS = {
     source: path.join(__dirname, 'src'),

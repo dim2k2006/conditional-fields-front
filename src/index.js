@@ -4,9 +4,9 @@ import attachEvent from './utils/attachEvent';
 import onUpdate from './utils/onUpdate';
 
 /**
- * Creates a new ConditionalForm class
+ * Creates a new ConditionalFields class
  */
-class ConditionalForm {
+class ConditionalFields {
     constructor(form, config = {}) {
         this.form = form;
         this.config = {
@@ -31,6 +31,6 @@ class ConditionalForm {
     }
 }
 
-window.ConditionalForm = ConditionalForm;
+window.ConditionalFields = ConditionalFields;
 
-export default ConditionalForm;
+export default ConditionalFields;
