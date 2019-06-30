@@ -14,7 +14,7 @@ describe('checkEnvironment', () => {
     test('Should return true.', () => {
         const window = {
             location: {
-                href: 'https://media-manager-front.herokuapp.com/'
+                href: 'https://dim2k2006.github.io/conditional-fields-demo/'
             }
         };
 

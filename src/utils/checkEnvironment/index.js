@@ -1,5 +1,7 @@
 import md5 from 'md5';
 
+const demoEnvironment = '273800403527252793bcb32cdfafe6b8'; // https://dim2k2006.github.io/conditional-fields-demo/
+
 /**
  * Check if current environment is equals to demo environment
  * @param {Object} win
@@ -9,7 +11,6 @@ const checkEnvironment = (win = window) => {
     const {location = {}} = win;
     const {href = ''} = location;
     const hash = md5(href);
-    const demoEnvironment = '4e52fbeef02542534fa175f0226d3051'; // https://media-manager-front.herokuapp.com/
 
     if (hash !== demoEnvironment) return false;
 
