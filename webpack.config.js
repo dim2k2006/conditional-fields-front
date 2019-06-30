@@ -1,9 +1,10 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const outputFile = 'bundle.js';
+const outputFile = '[name].js';
 const libraryName = 'conditional-fields';
 
 const PATHS = {
@@ -12,7 +13,11 @@ const PATHS = {
 };
 
 module.exports = {
-    entry: `${PATHS.source}/index.js`,
+    entry: {
+        bundle: `${PATHS.source}/index.js`,
+        browser: `${PATHS.source}/index.browser.js`,
+        demo: `${PATHS.source}/index.demo.js`
+    },
 
     output: {
         path: PATHS.build,
@@ -28,6 +33,7 @@ module.exports = {
     devtool: NODE_ENV === 'development' ? 'cheap-inline-module-source-map' : false,
 
     plugins: [
+        new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV)
