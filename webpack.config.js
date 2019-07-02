@@ -14,9 +14,9 @@ const PATHS = {
 
 module.exports = {
     entry: {
-        bundle: `${PATHS.source}/index.js`,
-        browser: `${PATHS.source}/index.browser.js`,
-        demo: `${PATHS.source}/index.demo.js`
+        [`${libraryName}.bundle`]: `${PATHS.source}/index.js`,
+        [`${libraryName}.browser`]: `${PATHS.source}/index.browser.js`,
+        [`${libraryName}.demo`]: `${PATHS.source}/index.demo.js`
     },
 
     output: {
