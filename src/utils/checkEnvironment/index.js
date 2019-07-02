@@ -10,7 +10,8 @@ const demoEnvironment = '273800403527252793bcb32cdfafe6b8'; // https://dim2k2006
 const checkEnvironment = (win = window) => {
     const {location = {}} = win;
     const {href = ''} = location;
-    const hash = md5(href);
+    const slicedHref = href.substring(0, href.lastIndexOf('/') + 1);
+    const hash = md5(slicedHref);
 
     if (hash !== demoEnvironment) return false;
 

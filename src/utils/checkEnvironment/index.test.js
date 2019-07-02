@@ -20,4 +20,14 @@ describe('checkEnvironment', () => {
 
         expect(checkEnvironment(window)).toBe(true);
     });
+
+    test('Should return true.', () => {
+        const window = {
+            location: {
+                href: 'https://dim2k2006.github.io/conditional-fields-demo/insurance.html'
+            }
+        };
+
+        expect(checkEnvironment(window)).toBe(true);
+    });
 });
