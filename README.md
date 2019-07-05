@@ -70,7 +70,7 @@ You can also add several values:
 
 In the example above input with name **alert** will be visible only if input with name **strange_thing** has the value that equals to **floppy** or **disk** or **floppy disk**.
 
-You even several rules:
+Or even several rules:
 
 ```html
 <form action="#" method="POST">
