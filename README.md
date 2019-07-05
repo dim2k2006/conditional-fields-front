@@ -21,6 +21,6 @@ You can choose between:
 
 2. ES6 Modules
 
-```
+```javascript
 import ConditionalFields from “conditional-fields”;
 ```
