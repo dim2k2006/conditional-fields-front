@@ -8,3 +8,19 @@ This gives you the opportunity to flexibly customize your HTML forms and to requ
 
 * compatibility with any CMS
 * 2.4 KB gzipped size
+
+## Setup
+
+You can choose between:
+
+1. Classic web with <script> tag
+
+```html
+<script src="conditional-fields.browser.js"></script>
+```
+
+2. ES6 Modules
+
+```
+import ConditionalFields from “conditional-fields”;
+```
