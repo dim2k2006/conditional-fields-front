@@ -1,4 +1,3 @@
-import 'core-js/modules/es6.array.find';
 import stringToArray from '../stringToArray';
 
 /**
@@ -8,7 +7,7 @@ import stringToArray from '../stringToArray';
  * @returns {Array}
  */
 const withReferenceValues = (rules = [], elements = []) => rules.map((rule) => {
-    const referenceElement = elements.find((element) => element.name === rule.name);
+    const [referenceElement] = elements.filter((element) => element.name === rule.name);
     const referenceValue = stringToArray(referenceElement.value);
 
     return {
