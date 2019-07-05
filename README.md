@@ -24,3 +24,9 @@ You can choose between:
 ```javascript
 import ConditionalFields from 'conditional-fields';
 ```
+
+## Usage
+
+```javascript
+new ConditionalForm(document.querySelector('form'));
+```
