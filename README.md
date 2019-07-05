@@ -103,3 +103,7 @@ new ConditionalForm(document.querySelector('form'), {
 ```
 
 Where **root** it is conditional field html node.
+
+## Restrictions
+
+Right now this library allows using only default form fields but in the future, there will be an option where you can define your own custom elements and make conditional not only form elements but any type of HTML element.
