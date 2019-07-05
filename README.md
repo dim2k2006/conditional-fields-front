@@ -30,3 +30,12 @@ import ConditionalFields from 'conditional-fields';
 ```javascript
 new ConditionalForm(document.querySelector('form'));
 ```
+
+You can also provide your own functions to show and hide form fields:
+
+```javascript
+new ConditionalForm(document.querySelector('form'), {
+    onShow: (root) => root.closest('div.row').style.display = 'block',
+    onHide: (root) => root.closest('div.row').style.display = 'none'
+});
+```
