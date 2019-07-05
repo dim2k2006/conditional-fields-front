@@ -52,6 +52,23 @@ new ConditionalForm(document.querySelector('form'));
 In the example above input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true**.
 
 
+You can also add several values:
+
+```html
+<form action="#" method="POST">
+    <div class="row">
+        <input type="text" name="strange_thing" placeholder="Type something">
+    </div>
+    
+    <div class="row">
+        <input name="alert" data-rules='[{"name": "strange_thing", "value": ["floppy", "disk", "floppy disk"]}]'>
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+```
+
+In the example above input with name **alert** will be visible only if input with name **strange_thing** has the value that equals to: **floppy** or **disk** or **floppy disk**.
 
 
 
