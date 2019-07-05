@@ -70,7 +70,27 @@ You can also add several values:
 
 In the example above input with name **alert** will be visible only if input with name **strange_thing** has the value that equals to: **floppy** or **disk** or **floppy disk**.
 
+You even several rules:
 
+```html
+<form action="#" method="POST">
+    <div class="row">
+        <input type="checkbox" name="is_adult"> Are you an adult?
+    </div>
+    
+    <div class="row">
+        <input type="checkbox" name="is_agreed"> Do you agree with the terms?
+    </div>
+    
+    <div class="row">
+        <input name="phone" data-rules='[{"name": "is_adult", "value": ["true"]}, {"name": "is_agreed", "value": ["true"]}]'>
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+```
+
+In the example above input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true** and input with name **is_agreed** has value that equals to **true**.
 
 
 You can also provide your own functions to show and hide form fields:
