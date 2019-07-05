@@ -1,17 +1,25 @@
-import flow from 'lodash/flow';
-import getConditionalNodes from './modules/getConditionalNodes';
-import getReferenceNodeNames from './modules/getReferenceNodeNames';
-import getReferenceNodes from './modules/getReferenceNodes';
-import buildElements from './modules/buildElements';
+import parseRules from '../parseRules';
+import buildElement from '../buildElement';
+import {elementRules} from '../../elements';
 
-/**
- * Builds custom elements on top of default form inputs
- */
-const getNodesAndBuildElements = flow(
-    getConditionalNodes,
-    getReferenceNodeNames,
-    getReferenceNodes,
-    buildElements
-);
+const getNodeRules = (attributeName) => (node) => parseRules(node.getAttribute(attributeName));
+
+const getRefNames = (accumulator, rules) => {
+    const names = rules.map((rule) => rule.name);
+
+    return [...accumulator, ...names];
+};
+
+const getNodesAndBuildElements = (props = {}) => {
+    const {form, attributeName = '', config = {}} = props;
+
+    const conditionalNodes = [].slice.call(form.querySelectorAll(`[${attributeName}]`)).map((node) => node);
+    const referenceNodes = conditionalNodes
+        .map(getNodeRules(attributeName))
+        .reduce(getRefNames, [])
+        .map((name) => form.querySelector(`[name="${name}"]`));
+
+    return [...conditionalNodes, ...referenceNodes].map((element) => buildElement(element, elementRules, config));
+};
 
 export default getNodesAndBuildElements;
