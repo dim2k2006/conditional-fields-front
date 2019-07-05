@@ -29,7 +29,7 @@ import ConditionalFields from 'conditional-fields';
 
 First of all, you will need an HTML form.
 
-To enable conditional logic you should add data-rules attribute to conditional field.
+To enable conditional logic you should add **data-rules** attribute to the conditional field.
 
 ```html
 <form action="#" method="POST">
