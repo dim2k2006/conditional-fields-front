@@ -1,5 +1,3 @@
-import 'core-js/modules/es6.array.find';
-
 /**
  * Builds form element
  * @param {HTMLElement} node
@@ -8,7 +6,8 @@ import 'core-js/modules/es6.array.find';
  * @returns {Object}
  */
 const buildElement = (node, elementRules = [], config = {}) => {
-    const {Element} = elementRules.find(({check}) => check(node));
+    const [data] = elementRules.filter(({check}) => check(node));
+    const {Element} = data;
 
     return new Element(node, config);
 };
