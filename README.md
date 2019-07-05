@@ -27,7 +27,7 @@ import ConditionalFields from 'conditional-fields';
 
 ## Usage
 
-First of all, you will need an html form.
+First of all, you will need an HTML form.
 
 To enable conditional logic you should add data-rules attribute to conditional field.
 
@@ -102,7 +102,7 @@ new ConditionalForm(document.querySelector('form'), {
 });
 ```
 
-Where **root** it is conditional field html node.
+Where **root** it is conditional field HTML node.
 
 ## Restrictions
 
