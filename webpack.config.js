@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const outputFile = '[name].js';
 const libraryName = 'conditional-fields';
@@ -38,7 +39,8 @@ module.exports = {
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV)
         }),
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        new BundleAnalyzerPlugin()
     ],
 
     module: {
