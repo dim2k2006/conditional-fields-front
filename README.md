@@ -27,18 +27,16 @@ import ConditionalFields from 'conditional-fields';
 
 ## Usage
 
+First of all, you will need an html form:
+
 ```html
 <form action="#" method="POST">
     <div class="row">
-    
+        <input type="checkbox" name="is_adult">  Are you an adult?
     </div>
     
     <div class="row">
-    
-    </div>
-    
-    <div class="row">
-    
+        <input name="phone" data-rules='[{"name": "is_adult", "value": ["true"]}]'>
     </div>
     
     <button type="submit">Submit</button>
