@@ -101,3 +101,5 @@ new ConditionalForm(document.querySelector('form'), {
     onHide: (root) => root.closest('div.row').style.display = 'none'
 });
 ```
+
+Where **root** it is conditional field html node.
