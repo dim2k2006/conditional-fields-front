@@ -4,4 +4,7 @@
 
 This gives you the opportunity to flexibly customize your HTML forms and to request only needed information from users.
 
+## Advantages
 
+* compatibility with any CMS
+* 2.4 KB gzipped size
