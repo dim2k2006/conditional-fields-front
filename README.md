@@ -102,7 +102,7 @@ new ConditionalForm(document.querySelector('form'), {
 });
 ```
 
-Where **root** it is conditional field HTML node.
+Where **root** it is a conditional field HTML node.
 
 ## Restrictions
 
