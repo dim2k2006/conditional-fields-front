@@ -27,12 +27,14 @@ import ConditionalFields from 'conditional-fields';
 
 ## Usage
 
-First of all, you will need an html form:
+First of all, you will need an html form.
+
+To enable conditional logic you should add data-rules attribute to conditional field.
 
 ```html
 <form action="#" method="POST">
     <div class="row">
-        <input type="checkbox" name="is_adult">  Are you an adult?
+        <input type="checkbox" name="is_adult"> Are you an adult?
     </div>
     
     <div class="row">
@@ -46,6 +48,13 @@ First of all, you will need an html form:
 ```javascript
 new ConditionalForm(document.querySelector('form'));
 ```
+
+In this case input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true**.
+
+
+
+
+
 
 You can also provide your own functions to show and hide form fields:
 
