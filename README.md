@@ -49,7 +49,7 @@ To enable conditional logic you should add data-rules attribute to conditional f
 new ConditionalForm(document.querySelector('form'));
 ```
 
-In this case input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true**.
+In the example above input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true**.
 
 
 
