@@ -27,6 +27,24 @@ import ConditionalFields from 'conditional-fields';
 
 ## Usage
 
+```html
+<form action="#" method="POST">
+    <div class="row">
+    
+    </div>
+    
+    <div class="row">
+    
+    </div>
+    
+    <div class="row">
+    
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+```
+
 ```javascript
 new ConditionalForm(document.querySelector('form'));
 ```
