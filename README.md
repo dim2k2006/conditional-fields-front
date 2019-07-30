@@ -7,6 +7,9 @@ This gives you the opportunity to flexibly customize your HTML forms and to requ
 ## Advantages
 
 * compatibility with any CMS
+* simple integration
+* easy to use
+* pure JavaScript without external dependencies
 * 2.4 KB gzipped size
 
 ## Setup
