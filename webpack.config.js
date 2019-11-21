@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const outputFile = '[name].js';
 const libraryName = 'conditional-fields';
@@ -17,7 +17,6 @@ module.exports = {
     entry: {
         [`${libraryName}.bundle`]: `${PATHS.source}/index.js`,
         [`${libraryName}.browser`]: `${PATHS.source}/index.browser.js`,
-        [`${libraryName}.demo`]: `${PATHS.source}/index.demo.js`
     },
 
     output: {
