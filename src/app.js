@@ -3,7 +3,7 @@ import getNodesAndBuildElements from './utils/getNodesAndBuildElements';
 import attachEvent from './utils/attachEvent';
 import onUpdate from './utils/onUpdate';
 
-const engine = (isCorrectEnv = true) =>
+const engine = () =>
     class ConditionalFields {
         constructor(form, config = {}) {
             this.form = form;
@@ -14,8 +14,6 @@ const engine = (isCorrectEnv = true) =>
                 onHide,
                 ...config
             };
-
-            if (!isCorrectEnv) return;
 
             this.init();
         }
