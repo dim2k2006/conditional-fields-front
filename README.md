@@ -12,11 +12,17 @@ This gives you the opportunity to flexibly customize your HTML forms and to requ
 * pure JavaScript without external dependencies
 * 2.4 KB gzipped size
 
+## Install
+
+```
+npm i conditional-fields
+```
+
 ## Setup
 
 You can choose between:
 
-1. Classic web with <script> tag
+1. Classic web
 
 ```html
 <script src="conditional-fields.browser.js"></script>
