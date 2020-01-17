@@ -1,6 +1,6 @@
 # Conditional fields
 
-«Conditional fields» is a JavaScript library that allows you to show or hide form fields based on user selections. 
+«Conditional fields» is a JavaScript library that allows you to show or hide form fields based on user selections.
 
 This gives you the opportunity to flexibly customize your HTML forms and to request only needed information from users.
 
@@ -45,17 +45,17 @@ To enable conditional logic you should add **data-rules** attribute to the condi
     <div class="row">
         <input type="checkbox" name="is_adult"> Are you an adult?
     </div>
-    
+
     <div class="row">
         <input name="phone" data-rules='[{"name": "is_adult", "value": ["true"]}]'>
     </div>
-    
+
     <button type="submit">Submit</button>
 </form>
 ```
 
 ```javascript
-new ConditionalForm(document.querySelector('form'));
+new ConditionalFields(document.querySelector('form'));
 ```
 
 In the example above input with name **phone** will be visible only if input with name **is_adult** has value that equals to **true**.
@@ -68,11 +68,11 @@ You can also add several values:
     <div class="row">
         <input type="text" name="strange_thing" placeholder="Type something">
     </div>
-    
+
     <div class="row">
         <input name="alert" data-rules='[{"name": "strange_thing", "value": ["floppy", "disk", "floppy disk"]}]'>
     </div>
-    
+
     <button type="submit">Submit</button>
 </form>
 ```
@@ -86,15 +86,15 @@ Or even several rules:
     <div class="row">
         <input type="checkbox" name="is_adult"> Are you an adult?
     </div>
-    
+
     <div class="row">
         <input type="checkbox" name="is_agreed"> Do you agree with the terms?
     </div>
-    
+
     <div class="row">
         <input name="phone" data-rules='[{"name": "is_adult", "value": ["true"]}, {"name": "is_agreed", "value": ["true"]}]'>
     </div>
-    
+
     <button type="submit">Submit</button>
 </form>
 ```
@@ -105,7 +105,7 @@ In the example above input with name **phone** will be visible only if input wit
 You can also provide your own functions to show and hide form fields:
 
 ```javascript
-new ConditionalForm(document.querySelector('form'), {
+new ConditionalFields(document.querySelector('form'), {
     onShow: (root) => root.closest('div.row').style.display = 'block',
     onHide: (root) => root.closest('div.row').style.display = 'none'
 });
